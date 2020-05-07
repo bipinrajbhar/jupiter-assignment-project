@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{IUrT:function(t,n,s){"use strict";s.r(n),function(t){n.default=function(){return t("div",{class:"flex justify-center h-screen"},t("h1",{class:"text-6xl font-bold text-gray-900 m-auto transform -translate-y-12"},"😞 Page Not Found"))}}.call(this,s("hosL").h)}}]);
+//# sourceMappingURL=route-pageNotFound.chunk.594b7.js.map
