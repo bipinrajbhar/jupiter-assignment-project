@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "jupiter-assignment-project",
+  "homepage": "http://bipinrajbhar.github.io/jupiter-assignment-project",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "postcss src/style/index.css -o src/style/index.css",
+    "watch:css": "postcss src/style/index.css -o src/style/index.css -w",
+    "build": "npm run build:css && preact build",
+    "serve": "sirv build --cors --single",
+    "dev": "npm run watch:css & preact watch",
+    "lint": "eslint src",
+    "test": "jest",
+    "predeloy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "autoprefixer": "^9.7.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-preact": "^1.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "postcss-cli": "^7.1.1",
+    "preact-cli": "^3.0.0-rc.6",
+    "preact-cli-tailwind": "^1.0.1",
+    "preact-render-spy": "^1.2.1",
+    "sirv-cli": "^0.4.5",
+    "tailwindcss": "^1.4.4"
+  },
+  "dependencies": {
+    "formik": "^2.1.4",
+    "gh-pages": "^2.2.0",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "preact-router": "^3.2.1",
+    "react-feather": "^2.0.8"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  }
+}
